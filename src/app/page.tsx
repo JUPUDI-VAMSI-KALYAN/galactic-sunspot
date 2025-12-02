@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
+import { Tagline } from "@/components/sections/Tagline";
 import { Introducing } from "@/components/sections/Introducing";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Comparison } from "@/components/sections/Comparison";
@@ -17,6 +18,7 @@ export default function Home() {
       <Comparison />
       <Market />
       <Security />
+      <Tagline />
       <Footer />
     </main>
   );

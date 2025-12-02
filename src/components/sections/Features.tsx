@@ -8,8 +8,8 @@ import Image from "next/image";
 
 const features = [
     {
-        title: "Banking for Migrants",
-        description: "Open a US bank account and get a credit card before you even land. Build US credit from day one.",
+        title: "Cross-Border Finance",
+        description: "Open a US bank account before you arrive. No SSN required. Build credit from day one.",
         icon: Landmark,
         className: "md:col-span-2",
         visual: (
@@ -42,8 +42,8 @@ const features = [
         )
     },
     {
-        title: "Micro Legal Consultations",
-        description: "Get instant answers from vetted immigration attorneys. AI-powered, lawyer-verified.",
+        title: "Immigration Infrastructure",
+        description: "Access licensed attorneys and automated visa compliance tools to protect your status.",
         icon: Scale,
         className: "md:col-span-1",
         visual: (
@@ -83,7 +83,10 @@ export function Features() {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Everything you need to Begin
+                        Everything you need to Begin{" "}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">
+                            Immigration Infrastructure.
+                        </span>
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto text-base">
                         We solve the three biggest challenges for new migrants: Banking, Payments, and Legal compliance.

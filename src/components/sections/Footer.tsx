@@ -12,7 +12,7 @@ export function Footer() {
                             Begin
                         </Link>
                         <p className="text-sm text-gray-400 max-w-sm mb-6">
-                            The first New Country Operating System for migrants. Banking, payments, and legal support in one app.
+                            The first New Country Operating System. Built by two international students who lived the chaos—so you don't have to.
                         </p>
                         <div className="flex gap-2">
                             <Input
@@ -28,7 +28,7 @@ export function Footer() {
                         <ul className="space-y-2">
                             <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Banking</Link></li>
                             <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Payments</Link></li>
-                            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Legal</Link></li>
+                            <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Compliance</Link></li>
                             <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
                         </ul>
                     </div>

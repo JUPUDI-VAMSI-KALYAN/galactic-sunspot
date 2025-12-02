@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ShieldCheck, CreditCard, Scale, Check, Compass, ListTodo } from "lucide-react";
+import { ShieldCheck, CreditCard, Scale, Check, Compass, ListTodo, TrendingUp } from "lucide-react";
 
 const features = [
     {
         id: "banking",
         icon: CreditCard,
-        title: "Banking Solutions",
-        description: "Onboard with home country ID. Access banking, credit, and insurance seamlessly.",
+        title: "Banking",
+        description: "Onboard with your home country ID. Access accounts, credit cards, and money transfers—no SSN required.",
         color: "from-[#8b7be8] to-[#6c5ce7]",
         visual: (
             <div className="relative w-full h-full flex items-center justify-center p-8">
@@ -61,8 +61,8 @@ const features = [
     {
         id: "legal",
         icon: Scale,
-        title: "Expert Assistance",
-        description: "Get instant answers to your quick legal questions. No expensive retainers, just help when you need it.",
+        title: "Compliance",
+        description: "Get instant answers to immigration questions. No $300/hr attorneys, just help when you need it.",
         color: "from-[#e69b7e] to-[#d37651]",
         visual: (
             <div className="relative w-full h-full flex items-center justify-center p-8">
@@ -162,62 +162,83 @@ const features = [
     {
         id: "essentials",
         icon: Compass,
-        title: "Life Essentials",
-        description: "Master your move. From getting your SSN and housing to understanding local culture.",
+        title: "Credit",
+        description: "Build your US credit history from day one—so you're ready for apartments, cars, and more.",
         color: "from-[#4b8add] to-[#2d5a9e]",
         visual: (
             <div className="relative w-full h-full flex items-center justify-center p-8">
-                {/* Life Essentials Mock UI */}
-                <div className="relative w-full max-w-md">
-                    {/* Settling In Checklist */}
-                    <div className="absolute top-0 left-0 w-72 h-64 bg-white rounded-2xl shadow-2xl p-6 border border-white/20 transform -rotate-3 z-10">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                                <ListTodo className="w-5 h-5" />
-                            </div>
+                {/* Credit Score Mock UI */}
+                <div className="relative w-full max-w-md" >
+                    {/* Credit Score Card */}
+                    < div className="absolute top-0 left-0 w-72 h-64 bg-white rounded-2xl shadow-2xl p-6 border border-white/20 transform -rotate-3 z-10" >
+                        <div className="flex justify-between items-start mb-6">
                             <div>
-                                <div className="text-sm font-bold text-gray-900">Settling In</div>
-                                <div className="text-xs text-gray-500">Your first 30 days</div>
+                                <div className="text-sm font-bold text-gray-900">FICO® Score 8</div>
+                                <div className="text-xs text-gray-500">Equifax</div>
+                            </div>
+                            <div className="p-2 bg-green-50 rounded-lg">
+                                <TrendingUp className="w-5 h-5 text-green-600" />
                             </div>
                         </div>
-                        <div className="space-y-3">
-                            <div className="flex items-center gap-3 p-2 bg-green-50 rounded-lg border border-green-100">
-                                <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                                    <Check className="w-3 h-3 text-white" />
+
+                        <div className="flex flex-col items-center mb-6">
+                            <div className="relative w-32 h-32 flex items-center justify-center">
+                                {/* Circular Progress Background */}
+                                <svg className="w-full h-full transform -rotate-90">
+                                    <circle
+                                        cx="64"
+                                        cy="64"
+                                        r="56"
+                                        stroke="currentColor"
+                                        strokeWidth="8"
+                                        fill="transparent"
+                                        className="text-gray-100"
+                                    />
+                                    <circle
+                                        cx="64"
+                                        cy="64"
+                                        r="56"
+                                        stroke="currentColor"
+                                        strokeWidth="8"
+                                        fill="transparent"
+                                        strokeDasharray="351.86"
+                                        strokeDashoffset="70"
+                                        className="text-green-500"
+                                    />
+                                </svg>
+                                <div className="absolute flex flex-col items-center">
+                                    <span className="text-3xl font-bold text-gray-900">720</span>
+                                    <span className="text-xs text-green-600 font-medium">Good</span>
                                 </div>
-                                <span className="text-sm font-medium text-gray-700 line-through">Get SIM Card</span>
                             </div>
-                            <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg border border-gray-100">
-                                <div className="w-5 h-5 border-2 border-blue-500 rounded-full" />
-                                <span className="text-sm font-medium text-gray-900">Apply for SSN</span>
-                            </div>
-                            <div className="flex items-center gap-3 p-2 bg-gray-50 rounded-lg border border-gray-100">
-                                <div className="w-5 h-5 border-2 border-gray-300 rounded-full" />
-                                <span className="text-sm font-medium text-gray-500">Open Bank Account</span>
-                            </div>
+                        </div>
+
+                        <div className="flex justify-between items-center text-xs text-gray-500">
+                            <span>Updated today</span>
+                            <span className="text-green-600 font-medium">+15 pts</span>
                         </div>
                     </div>
 
-                    {/* Community Event Card */}
+                    {/* Milestone Card */}
                     <div className="absolute bottom-[-20px] right-[-20px] w-64 bg-gray-900 text-white rounded-2xl shadow-xl p-5 border border-white/10 transform rotate-6 z-20">
-                        <div className="flex items-center justify-between mb-4">
-                            <div className="text-xs font-bold text-orange-400 uppercase tracking-wider">Upcoming Event</div>
-                            <div className="px-2 py-1 bg-white/10 rounded text-[10px]">Tomorrow</div>
+                        <div className="flex items-center gap-3 mb-3">
+                            <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center">
+                                <Check className="w-4 h-4 text-white" />
+                            </div>
+                            <div>
+                                <div className="text-sm font-bold">Milestone Reached</div>
+                                <div className="text-xs text-gray-400">Credit Journey</div>
+                            </div>
                         </div>
-                        <div className="mb-4">
-                            <div className="text-lg font-bold mb-1">City Welcome Mixer</div>
-                            <div className="text-sm text-gray-400">Meet other international students</div>
+                        <div className="p-3 bg-white/10 rounded-lg border border-white/5">
+                            <div className="text-sm font-medium mb-1">Apartment Approved</div>
+                            <div className="text-xs text-gray-400">Your credit score met the requirements for 1200 Main St.</div>
                         </div>
-                        <div className="flex -space-x-2">
-                            <div className="w-8 h-8 rounded-full bg-blue-500 border-2 border-gray-900" />
-                            <div className="w-8 h-8 rounded-full bg-purple-500 border-2 border-gray-900" />
-                            <div className="w-8 h-8 rounded-full bg-green-500 border-2 border-gray-900" />
-                            <div className="w-8 h-8 rounded-full bg-gray-700 border-2 border-gray-900 flex items-center justify-center text-xs font-bold">+12</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    </div >
+                </div >
+            </div >
         )
+
     }
 ];
 
@@ -250,8 +271,8 @@ export function Introducing() {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-6xl font-bold text-[#022c22] mb-6 tracking-tight"
                     >
-                        The complete platform with <br className="hidden md:block" />
-                        integrated services.
+                        The first operating system for <br className="hidden md:block" />
+                        your American life.
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -260,7 +281,7 @@ export function Introducing() {
                         transition={{ delay: 0.2 }}
                         className="text-gray-500 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
                     >
-                        AI compliance, banking, and legal—one platform that keeps students legal and operational.
+                        Banking. Credit. Compliance. Finally connected.
                     </motion.p>
                 </div>
 

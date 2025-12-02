@@ -33,7 +33,7 @@ export function HowItWorks() {
                         transition={{ delay: 0.2 }}
                         className="text-gray-500 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
                     >
-                        Replace scattered information, disconnected services, and complex rules with a single, unified operating system.
+                        We remember the anxiety. That's why we built the relief.
                     </motion.p>
                 </div>
 
@@ -46,7 +46,7 @@ export function HowItWorks() {
                         transition={{ duration: 0.6 }}
                         className="bg-[#f9fafb] rounded-[2rem] p-8 md:p-12 border border-gray-100 flex flex-col items-center text-center"
                     >
-                        <h3 className="text-2xl font-semibold text-gray-900 mb-2">Student Experience is Broken</h3>
+                        <h3 className="text-2xl font-semibold text-gray-900 mb-2">The Current System is Broken</h3>
                         <p className="text-gray-400 mb-12">Manual research, disconnected services, and anxiety.</p>
 
                         <div className="w-full max-w-sm space-y-4 relative">

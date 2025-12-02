@@ -18,7 +18,7 @@ export function Comparison() {
             begin: "Low cost & Instant",
         },
         {
-            name: "Legal Support",
+            name: "Compliance",
             banks: "None",
             legal: "Expensive ($300+/hr)",
             begin: "Included / AI-powered",

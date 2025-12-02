@@ -105,7 +105,7 @@ export function Hero() {
                             Operating System
                         </h1>
                         <p className="text-sm text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                            Begin unifies banking, cross-border payments, and legal support in one AI-native app. Build US credit from day one.
+                            Begin gives international students the financial tools and legal confidence to thrive from day one.
                         </p>
                     </motion.div>
 
@@ -135,15 +135,15 @@ export function Hero() {
                     >
                         <div className="flex items-center gap-2">
                             <Globe className="h-3 w-3 text-white/60" />
-                            <span>Global Payments</span>
+                            <span>Banking</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <ShieldCheck className="h-3 w-3 text-white/60" />
-                            <span>Legal Support</span>
+                            <span>Compliance</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <CreditCard className="h-3 w-3 text-white/60" />
-                            <span>US Credit Build</span>
+                            <span>Credit</span>
                         </div>
                     </motion.div>
 

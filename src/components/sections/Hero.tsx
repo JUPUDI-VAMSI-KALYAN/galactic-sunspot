@@ -6,6 +6,7 @@ import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { ArrowRight, Globe, ShieldCheck, CreditCard, DollarSign, Euro, PoundSterling, JapaneseYen, Bitcoin, IndianRupee } from "lucide-react";
 import { MouseEvent } from "react";
 import RotatingEarth from "@/components/ui/RotatingEarth";
+import UniversityTicker from "@/components/ui/UniversityTicker";
 
 export function Hero() {
     const mouseX = useMotionValue(0);
@@ -186,8 +187,8 @@ export function Hero() {
             {/* Trusted By Section */}
             <div className="container mx-auto px-4 relative z-10 mt-20 border-t border-white/10 pt-8">
                 <p className="text-center text-sm text-gray-400 mb-6 uppercase tracking-wider">Trusted by students from</p>
-                <div className="flex justify-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                    <div className="text-xl font-serif font-bold text-white/80">8+ universities</div>
+                <div className="max-w-4xl mx-auto">
+                    <UniversityTicker />
                 </div>
             </div>
         </section>

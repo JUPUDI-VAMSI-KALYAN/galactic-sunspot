@@ -33,13 +33,17 @@ export function Tagline() {
                         <h2 className="text-lg md:text-2xl font-serif font-medium text-white/90 leading-relaxed tracking-wide max-w-2xl mx-auto">
                             &quot;Moving countries is hard. Everything else shouldn&apos;t be. That&apos;s why we built Begin.&quot;
                         </h2>
+                        <div className="flex flex-col items-center gap-1">
+                            <span className="text-base font-medium text-white">Vamsi Jupudi</span>
+                            <span className="text-sm text-white/60">Founder & CEO</span>
+                        </div>
                     </div>
 
                     {/* Decorative Elements */}
                     <div className="absolute top-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
                     <div className="absolute bottom-0 right-0 w-48 h-48 bg-black/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
                 </motion.div>
-            </div>
-        </section>
+            </div >
+        </section >
     );
 }

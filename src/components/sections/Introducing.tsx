@@ -8,7 +8,7 @@ const features = [
     {
         id: "banking",
         icon: CreditCard,
-        title: "Financial Core",
+        title: "Banking",
         description: "Onboard with your home country ID. Access accounts, credit cards, and money transfers—no SSN required.",
         color: "from-[#8b7be8] to-[#6c5ce7]",
         visual: (
@@ -61,7 +61,7 @@ const features = [
     {
         id: "legal",
         icon: Scale,
-        title: "Legal Framework",
+        title: "Compliance",
         description: "Get instant answers to immigration questions. No $300/hr attorneys, just help when you need it.",
         color: "from-[#e69b7e] to-[#d37651]",
         visual: (
@@ -162,7 +162,7 @@ const features = [
     {
         id: "essentials",
         icon: Compass,
-        title: "Lifestyle Layer",
+        title: "Credit",
         description: "Build your US credit history from day one—so you're ready for apartments, cars, and more.",
         color: "from-[#4b8add] to-[#2d5a9e]",
         visual: (

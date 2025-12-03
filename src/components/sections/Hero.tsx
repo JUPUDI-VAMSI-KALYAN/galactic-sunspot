@@ -106,7 +106,8 @@ export function Hero() {
                             Operating System
                         </h1>
                         <p className="text-sm text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                            Begin gives international students the financial tools and legal confidence to thrive from day one.
+                            Begin gives international students the financial tools <br className="hidden md:block" />
+                            and legal confidence to thrive from day one.
                         </p>
                     </motion.div>
 

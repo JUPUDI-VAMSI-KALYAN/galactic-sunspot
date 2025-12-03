@@ -196,6 +196,13 @@ export function Hero() {
                             <span className="text-base font-bold text-white tracking-tight">gener8tor</span>
                             <span className="text-base font-bold text-white tracking-tight">IDEABANK</span>
                         </div>
+
+                        <div className="mt-8 pt-6 border-t border-white/5 text-center lg:text-left">
+                            <a href="/universities" className="inline-flex items-center gap-2 text-xs text-gray-400 hover:text-white transition-colors group/link">
+                                <span>Are you a University? Partner with us</span>
+                                <ArrowRight className="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" />
+                            </a>
+                        </div>
                     </motion.div>
                 </div>
 

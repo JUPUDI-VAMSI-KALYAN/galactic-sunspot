@@ -114,16 +114,14 @@ export function Hero() {
                         transition={{ duration: 0.5 }}
                     >
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/10 border border-white/20 text-white/80 text-xs font-medium mb-6 backdrop-blur-sm">
-                            For International Students & Global Citizens
+                            For International Students
                         </div>
                         <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-white mb-4">
-                            The First New Country
-                            <br />
-                            Operating System
+                            The World's Only <br />
+                            Compliance-First Bank
                         </h1>
                         <p className="text-sm text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                            Begin gives international students the financial tools <br className="hidden md:block" />
-                            and legal confidence to thrive from day one.
+                            Stay in status. Build credit. Bank instantly — from day one.
                         </p>
                     </motion.div>
 

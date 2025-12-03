@@ -4,11 +4,42 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { ArrowRight, Globe, ShieldCheck, CreditCard, DollarSign, Euro, PoundSterling, JapaneseYen, Bitcoin, IndianRupee } from "lucide-react";
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 import RotatingEarth from "@/components/ui/RotatingEarth";
 import UniversityTicker from "@/components/ui/UniversityTicker";
 
 export function Hero() {
+    const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState("");
+    const [success, setSuccess] = useState(false);
+
+    async function handleSubmit(e: React.FormEvent) {
+        e.preventDefault();
+        setLoading(true);
+        setMessage("");
+
+        try {
+            const res = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) throw new Error(data.error || 'Something went wrong');
+
+            setSuccess(true);
+            setMessage("Thanks for joining!");
+            setEmail("");
+        } catch (error: any) {
+            setMessage(error.message);
+        } finally {
+            setLoading(false);
+        }
+    }
+
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
@@ -117,14 +148,30 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start max-w-md mx-auto lg:mx-0"
                     >
-                        <form className="flex w-full gap-2" onSubmit={(e) => e.preventDefault()}>
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all"
-                            />
-                            <Button size="sm" className="text-sm px-5 h-full bg-white text-[#022c22] hover:bg-gray-100 border-0 whitespace-nowrap">
-                                Join Waitlist <ArrowRight className="ml-2 h-3 w-3" />
+                        <form className="flex w-full gap-2" onSubmit={handleSubmit}>
+                            <div className="flex-1 relative">
+                                <input
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Enter your email"
+                                    disabled={loading || success}
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all disabled:opacity-50"
+                                />
+                                {message && (
+                                    <span className={`absolute -bottom-6 left-0 text-xs ${success ? 'text-green-400' : 'text-red-400'}`}>
+                                        {message}
+                                    </span>
+                                )}
+                            </div>
+                            <Button
+                                type="submit"
+                                size="sm"
+                                disabled={loading || success}
+                                className="text-sm px-5 h-full bg-white text-[#022c22] hover:bg-gray-100 border-0 whitespace-nowrap disabled:opacity-70"
+                            >
+                                {loading ? 'Joining...' : success ? 'Joined!' : 'Join Waitlist'}
+                                {!success && !loading && <ArrowRight className="ml-2 h-3 w-3" />}
                             </Button>
                         </form>
                     </motion.div>

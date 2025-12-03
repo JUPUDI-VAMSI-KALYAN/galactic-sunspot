@@ -7,6 +7,7 @@ import { Comparison } from "@/components/sections/Comparison";
 import { Market } from "@/components/sections/Market";
 import { Security } from "@/components/sections/Security";
 import { Footer } from "@/components/sections/Footer";
+import { Disclaimer } from "@/components/sections/Disclaimer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Security />
       <Tagline />
       <Footer />
+      <Disclaimer />
     </main>
   );
 }

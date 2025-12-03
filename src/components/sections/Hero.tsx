@@ -4,41 +4,15 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { ArrowRight, Globe, ShieldCheck, CreditCard, DollarSign, Euro, PoundSterling, JapaneseYen, Bitcoin, IndianRupee } from "lucide-react";
-import { MouseEvent, useState } from "react";
+import { MouseEvent } from "react";
 import RotatingEarth from "@/components/ui/RotatingEarth";
 import UniversityTicker from "@/components/ui/UniversityTicker";
 
+import { useWaitlist } from "@/hooks/useWaitlist";
+
 export function Hero() {
-    const [email, setEmail] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [message, setMessage] = useState("");
-    const [success, setSuccess] = useState(false);
+    const { email, setEmail, loading, message, success, submitWaitlist } = useWaitlist();
 
-    async function handleSubmit(e: React.FormEvent) {
-        e.preventDefault();
-        setLoading(true);
-        setMessage("");
-
-        try {
-            const res = await fetch('/api/waitlist', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email }),
-            });
-
-            const data = await res.json();
-
-            if (!res.ok) throw new Error(data.error || 'Something went wrong');
-
-            setSuccess(true);
-            setMessage("Thanks for joining!");
-            setEmail("");
-        } catch (error: any) {
-            setMessage(error.message);
-        } finally {
-            setLoading(false);
-        }
-    }
 
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -148,7 +122,7 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start max-w-md mx-auto lg:mx-0"
                     >
-                        <form className="flex w-full gap-2" onSubmit={handleSubmit}>
+                        <form className="flex w-full gap-2" onSubmit={submitWaitlist}>
                             <div className="flex-1 relative">
                                 <input
                                     type="email"

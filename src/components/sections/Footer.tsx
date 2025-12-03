@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useWaitlist } from "@/hooks/useWaitlist";
 
 export function Footer() {
+    const { email, setEmail, loading, message, success, submitWaitlist } = useWaitlist();
     return (
         <footer className="bg-black border-t border-white/10 py-32">
             <div className="container mx-auto px-4">
@@ -14,13 +18,29 @@ export function Footer() {
                         <p className="text-sm text-gray-400 max-w-sm mb-6">
                             The first New Country Operating System. Built by two international students who lived the chaos—so you don't have to.
                         </p>
-                        <div className="flex gap-2">
-                            <Input
-                                placeholder="Enter your email"
-                                className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-orange-500/50 focus:ring-orange-500/20"
-                            />
-                            <Button className="bg-white text-[#022c22] hover:bg-gray-100 font-semibold">Subscribe</Button>
-                        </div>
+                        <form onSubmit={submitWaitlist} className="flex gap-2 relative">
+                            <div className="flex-1">
+                                <Input
+                                    placeholder="Enter your email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    disabled={loading || success}
+                                    className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-orange-500/50 focus:ring-orange-500/20 disabled:opacity-50"
+                                />
+                                {message && (
+                                    <span className={`absolute -bottom-6 left-0 text-xs ${success ? 'text-green-400' : 'text-red-400'}`}>
+                                        {message}
+                                    </span>
+                                )}
+                            </div>
+                            <Button
+                                type="submit"
+                                disabled={loading || success}
+                                className="bg-white text-[#022c22] hover:bg-gray-100 font-semibold disabled:opacity-70"
+                            >
+                                {loading ? '...' : success ? 'Done' : 'Subscribe'}
+                            </Button>
+                        </form>
                     </div>
 
                     <div>

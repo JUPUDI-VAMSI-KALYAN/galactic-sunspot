@@ -77,16 +77,17 @@ export function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <Link
-                        href="#"
-                        className={cn(
-                            "text-sm font-medium transition-colors hover:text-primary hidden sm:block",
-                            scrolled ? "text-gray-600" : "text-gray-300 hover:text-white"
-                        )}
-                    >
-                        Sign In
-                    </Link>
+
                     <Button
+                        onClick={() => {
+                            const element = document.getElementById('waitlist-form');
+                            if (element) {
+                                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                setTimeout(() => {
+                                    window.dispatchEvent(new Event('trigger-waitlist-glow'));
+                                }, 500);
+                            }
+                        }}
                         className={cn(
                             "transition-colors",
                             scrolled

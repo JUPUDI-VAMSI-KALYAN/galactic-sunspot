@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { ArrowRight, Globe, ShieldCheck, CreditCard, DollarSign, Euro, PoundSterling, JapaneseYen, Bitcoin, IndianRupee } from "lucide-react";
-import { MouseEvent } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 import RotatingEarth from "@/components/ui/RotatingEarth";
 import UniversityTicker from "@/components/ui/UniversityTicker";
 
@@ -12,6 +12,17 @@ import { useWaitlist } from "@/hooks/useWaitlist";
 
 export function Hero() {
     const { email, setEmail, loading, message, success, submitWaitlist } = useWaitlist();
+    const [isGlowing, setIsGlowing] = useState(false);
+
+    useEffect(() => {
+        const handleGlow = () => {
+            setIsGlowing(true);
+            setTimeout(() => setIsGlowing(false), 2500);
+        };
+
+        window.addEventListener('trigger-waitlist-glow', handleGlow);
+        return () => window.removeEventListener('trigger-waitlist-glow', handleGlow);
+    }, []);
 
 
     const mouseX = useMotionValue(0);
@@ -122,7 +133,11 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start max-w-md mx-auto lg:mx-0"
                     >
-                        <form className="flex w-full gap-2" onSubmit={submitWaitlist}>
+                        <form
+                            id="waitlist-form"
+                            className={`flex w-full gap-2 transition-all duration-700 ${isGlowing ? 'ring-2 ring-white/30 rounded-xl shadow-[0_0_30px_rgba(255,255,255,0.2)]' : ''}`}
+                            onSubmit={submitWaitlist}
+                        >
                             <div className="flex-1 relative">
                                 <input
                                     type="email"

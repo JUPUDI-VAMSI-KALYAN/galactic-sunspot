@@ -48,22 +48,31 @@ export function Navbar() {
 
                 <div className="hidden md:flex items-center gap-8">
                     <Link
-                        href="#product"
+                        href="#what"
                         className={cn(
                             "text-sm font-medium transition-colors hover:text-primary",
                             scrolled ? "text-gray-600" : "text-gray-300"
                         )}
                     >
-                        Product
+                        What?
                     </Link>
                     <Link
-                        href="#features"
+                        href="#how"
                         className={cn(
                             "text-sm font-medium transition-colors hover:text-primary",
                             scrolled ? "text-gray-600" : "text-gray-300"
                         )}
                     >
-                        Features
+                        Why?
+                    </Link>
+                    <Link
+                        href="#why"
+                        className={cn(
+                            "text-sm font-medium transition-colors hover:text-primary",
+                            scrolled ? "text-gray-600" : "text-gray-300"
+                        )}
+                    >
+                        How?
                     </Link>
                     <Link
                         href="mailto:founders@thinkarc.ai"

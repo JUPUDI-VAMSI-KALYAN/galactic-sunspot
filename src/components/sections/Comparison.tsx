@@ -38,7 +38,7 @@ export function Comparison() {
     ];
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section id="why" className="py-24 bg-white relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16 space-y-4">
                     <motion.div
@@ -47,7 +47,7 @@ export function Comparison() {
                         viewport={{ once: true }}
                         className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-[#5e6ad2] uppercase bg-[#5e6ad2]/10 rounded-md"
                     >
-                        Why Begin OS
+                        How It Works
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

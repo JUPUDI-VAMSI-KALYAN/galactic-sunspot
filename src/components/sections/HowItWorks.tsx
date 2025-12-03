@@ -5,7 +5,7 @@ import { ArrowDown, Check, X, Shield, CreditCard, TrendingUp, ShieldCheck } from
 
 export function HowItWorks() {
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section id="how" className="py-24 bg-white relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-20">
                     <motion.div
@@ -14,7 +14,7 @@ export function HowItWorks() {
                         viewport={{ once: true }}
                         className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-[#5e6ad2] uppercase bg-[#5e6ad2]/10 rounded-md"
                     >
-                        How It Works
+                        Why Begin OS
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

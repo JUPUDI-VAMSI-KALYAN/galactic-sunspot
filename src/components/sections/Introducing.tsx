@@ -253,7 +253,7 @@ export function Introducing() {
     }, []);
 
     return (
-        <section className="py-32 my-12 bg-white relative overflow-hidden">
+        <section id="what" className="py-32 my-12 bg-white relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <motion.div

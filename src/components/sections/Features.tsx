@@ -43,7 +43,7 @@ const features = [
     },
     {
         title: "Immigration Infrastructure",
-        description: "Access licensed attorneys and automated visa compliance tools to protect your status.",
+        description: "AI-powered guidance to stay in status — backed by licensed attorneys when you need them. No $300/hr attorneys.",
         icon: Scale,
         className: "md:col-span-1",
         visual: (

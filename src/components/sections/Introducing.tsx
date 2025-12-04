@@ -62,7 +62,7 @@ const features = [
         id: "legal",
         icon: Scale,
         title: "Compliance",
-        description: "Get instant answers to immigration questions. No $300/hr attorneys, just help when you need it.",
+        description: "AI-powered guidance to stay in status — backed by licensed attorneys when you need them. No $300/hr attorneys.",
         color: "from-[#e69b7e] to-[#d37651]",
         visual: (
             <div className="relative w-full h-full flex items-center justify-center p-8">

@@ -118,7 +118,7 @@ export function Hero() {
                         </div>
                         <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-white mb-4">
                             The World's Only <br />
-                            Compliance-First Bank
+                            Compliance-First Banking Platform
                         </h1>
                         <p className="text-sm text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                             Stay in status. Build credit. Bank instantly — from day one.

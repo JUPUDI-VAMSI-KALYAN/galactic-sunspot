@@ -194,6 +194,9 @@ export function Hero() {
                             <span className="text-base font-bold text-white tracking-tight">gener8tor</span>
                             <span className="text-base font-bold text-white tracking-tight">IDEABANK</span>
                         </div>
+                        <p className="mt-4 text-xs text-white/30 font-medium tracking-wide text-center lg:text-left">
+                            Built for international students, by international students.
+                        </p>
                     </motion.div>
                 </div>
 

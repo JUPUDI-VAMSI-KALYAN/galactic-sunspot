@@ -34,7 +34,7 @@ export function Navbar() {
                             scrolled ? "text-gray-900" : "text-white"
                         )}
                     >
-                        Begin
+                        BeginOS
                     </Link>
                     <span className={cn(
                         "ml-3 px-2 py-0.5 rounded-full text-[10px] font-medium uppercase tracking-wider border backdrop-blur-sm",

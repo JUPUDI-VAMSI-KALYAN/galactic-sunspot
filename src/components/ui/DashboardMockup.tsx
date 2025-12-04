@@ -53,7 +53,7 @@ export function DashboardMockup() {
                             {/* Virtual Card Preview */}
                             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
                                 <div className="flex items-center justify-between mb-3">
-                                    <span className="text-sm font-semibold">Begin Card</span>
+                                    <span className="text-sm font-semibold">BeginOS Card</span>
                                     <CreditCard className="w-5 h-5" />
                                 </div>
                                 <div className="flex gap-2 mb-3">

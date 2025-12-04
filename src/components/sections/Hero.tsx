@@ -211,7 +211,7 @@ export function Hero() {
                         <div className="relative rounded-[1.5rem] overflow-hidden border-[4px] border-gray-900 shadow-2xl bg-white">
                             <Image
                                 src="/hero-dashboard.png"
-                                alt="Begin App Dashboard"
+                                alt="BeginOS App Dashboard"
                                 width={320}
                                 height={640}
                                 className="w-full h-auto"

@@ -29,9 +29,9 @@ export function Tagline() {
 
                     {/* Content */}
                     <div className="relative z-10 flex flex-col items-center gap-6">
-                        <span className="text-2xl font-bold tracking-tight text-white">Begin</span>
+                        <span className="text-2xl font-bold tracking-tight text-white">BeginOS</span>
                         <h2 className="text-lg md:text-2xl font-serif font-medium text-white/90 leading-relaxed tracking-wide max-w-2xl mx-auto">
-                            &quot;Moving countries is hard. Everything else shouldn&apos;t be. That&apos;s why we built Begin.&quot;
+                            &quot;Moving countries is hard. Everything else shouldn&apos;t be. That&apos;s why we built BeginOS.&quot;
                         </h2>
                         <div className="flex flex-col items-center gap-1">
                             <span className="text-base font-medium text-white">Vamsi Jupudi</span>

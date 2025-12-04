@@ -14,7 +14,7 @@ export function Market() {
                             The Migration Century
                         </h2>
                         <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                            We are witnessing the largest movement of human capital in history. Yet, the infrastructure to support it is stuck in the past. Begin OS is the digital bridge for the 304 million people seeking a better life.
+                            We are witnessing the largest movement of human capital in history. Yet, the infrastructure to support it is stuck in the past. BeginOS is the digital bridge for the 304 million people seeking a better life.
                         </p>
 
                         <div className="space-y-6">

@@ -13,20 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Begin - The First New Country Operating System",
-  description: "Begin unifies banking, cross-border payments, and legal support in one AI-native app. Built for the 281 million people seeking a better life. Build US credit from day one.",
+  title: "BeginOS - The First New Country Operating System",
+  description: "BeginOS unifies banking, cross-border payments, and legal support in one AI-native app. Built for the 281 million people seeking a better life. Build US credit from day one.",
   keywords: ["international students", "banking for students", "immigration legal help", "cross-border payments", "US credit building", "student banking"],
   authors: [{ name: "ThinkARC Inc" }],
   openGraph: {
-    title: "Begin - The First New Country Operating System",
+    title: "BeginOS - The First New Country Operating System",
     description: "Banking, payments, and legal support for international students. Build US credit from day one.",
     type: "website",
     locale: "en_US",
-    siteName: "Begin",
+    siteName: "BeginOS",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Begin - The First New Country Operating System",
+    title: "BeginOS - The First New Country Operating System",
     description: "Banking, payments, and legal support for international students. Build US credit from day one.",
   },
   robots: {

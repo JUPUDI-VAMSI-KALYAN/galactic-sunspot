@@ -14,7 +14,7 @@ export function HowItWorks() {
                         viewport={{ once: true }}
                         className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-[#5e6ad2] uppercase bg-[#5e6ad2]/10 rounded-md"
                     >
-                        Why Begin OS
+                        Why BeginOS
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export function HowItWorks() {
                         </div>
                     </motion.div>
 
-                    {/* Right Side: Begin OS (Unified Card) */}
+                    {/* Right Side: BeginOS (Unified Card) */}
                     <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -74,7 +74,7 @@ export function HowItWorks() {
 
                         <div className="relative z-10 flex flex-col items-center h-full justify-between">
                             <div>
-                                <h3 className="text-2xl font-semibold text-white mb-2">With Begin OS</h3>
+                                <h3 className="text-2xl font-semibold text-white mb-2">With BeginOS</h3>
                                 <p className="text-gray-400 mb-12">A single platform to manage your entire journey.</p>
                             </div>
 

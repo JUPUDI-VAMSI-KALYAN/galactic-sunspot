@@ -79,7 +79,7 @@ export function Comparison() {
                         <div className="col-span-1 py-8 pl-8"></div>
                         <div className="text-center font-medium text-xl text-gray-900 py-8 border-b border-gray-200">Traditional Banks</div>
                         <div className="text-center font-medium text-xl text-gray-900 py-8 border-b border-gray-200">Legal Firms</div>
-                        <div className="text-center font-bold text-white text-xl py-8 border-b border-white/10">Begin OS</div>
+                        <div className="text-center font-bold text-white text-xl py-8 border-b border-white/10">BeginOS</div>
 
                         {/* Rows */}
                         {features.map((feature, index) => (
@@ -131,7 +131,7 @@ export function Comparison() {
 
                         <div className="bg-[#022c22] p-8 rounded-2xl shadow-xl text-white relative overflow-hidden">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl" />
-                            <h3 className="font-bold text-xl mb-6 text-center">Begin OS</h3>
+                            <h3 className="font-bold text-xl mb-6 text-center">BeginOS</h3>
                             <div className="space-y-5">
                                 {features.map(f => (
                                     <div key={f.name} className="flex justify-between items-center text-sm border-b border-white/10 pb-3 last:border-0 last:pb-0">

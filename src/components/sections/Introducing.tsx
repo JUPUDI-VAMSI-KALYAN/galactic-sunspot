@@ -18,7 +18,7 @@ const features = [
                     {/* Credit Card */}
                     <div className="absolute top-0 right-0 w-72 h-44 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl p-6 text-white border border-white/10 transform rotate-6 z-10">
                         <div className="flex justify-between items-start mb-8">
-                            <div className="text-lg font-bold tracking-wider">Begin</div>
+                            <div className="text-lg font-bold tracking-wider">BeginOS</div>
                             <div className="w-10 h-6 bg-white/20 rounded-md" />
                         </div>
                         <div className="space-y-4">
@@ -262,7 +262,7 @@ export function Introducing() {
                         viewport={{ once: true }}
                         className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-widest text-[#5e6ad2] uppercase bg-[#5e6ad2]/10 rounded-md"
                     >
-                        Introducing Begin OS
+                        Introducing BeginOS
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}

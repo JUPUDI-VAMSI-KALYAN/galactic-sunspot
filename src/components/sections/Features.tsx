@@ -83,7 +83,7 @@ export function Features() {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                        Everything you need to Begin{" "}
+                        Everything you need to BeginOS{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">
                             Immigration Infrastructure.
                         </span>

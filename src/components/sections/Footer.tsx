@@ -13,7 +13,7 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     <div className="md:col-span-2">
                         <Link href="/" className="text-2xl font-bold text-white tracking-tight mb-4 block">
-                            Begin
+                            BeginOS
                         </Link>
                         <p className="text-sm text-gray-400 max-w-sm mb-6">
                             The first New Country Operating System. Built by two international students who lived the chaos—so you don't have to.

@@ -75,7 +75,7 @@ export function Navbar() {
                         How?
                     </Link>
                     <Link
-                        href="mailto:founders@thinkarc.ai"
+                        href="mailto:hello@beginos.co"
                         className={cn(
                             "text-sm font-medium transition-colors hover:text-primary",
                             scrolled ? "text-gray-600" : "text-gray-300"

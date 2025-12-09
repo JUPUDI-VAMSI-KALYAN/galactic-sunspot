@@ -207,16 +207,29 @@ export function Hero() {
                     className="relative w-full flex justify-center lg:justify-end lg:pr-40"
                 >
                     {/* Dashboard Visual */}
-                    <div className="relative w-[240px] flex-none">
-                        <div className="relative rounded-[1.5rem] overflow-hidden border-[4px] border-gray-900 shadow-2xl bg-white">
-                            <Image
-                                src="/hero-dashboard.png"
-                                alt="BeginOS App Dashboard"
-                                width={320}
-                                height={640}
-                                className="w-full h-auto"
-                                priority
-                            />
+                    <div className="relative w-[280px] flex-none transform rotate-[-5deg] hover:rotate-0 transition-all duration-500">
+                        {/* iPhone Frame */}
+                        <div className="relative rounded-[3rem] border-[8px] border-gray-900 shadow-2xl bg-gray-900 overflow-hidden h-[580px]">
+                            {/* Dynamic Island / Notch */}
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 h-5 w-28 bg-black rounded-b-2xl z-20"></div>
+
+                            {/* Side Buttons (Decorations) */}
+                            <div className="absolute top-24 -left-3 h-10 w-1 bg-gray-800 rounded-l-md"></div>
+                            <div className="absolute top-40 -left-3 h-16 w-1 bg-gray-800 rounded-l-md"></div>
+                            <div className="absolute top-32 -right-3 h-20 w-1 bg-gray-800 rounded-r-md"></div>
+
+                            {/* Screen Content */}
+                            <div className="rounded-[2.5rem] overflow-hidden bg-white relative h-full w-full">
+                                <div className="absolute inset-0 top-4">
+                                    <Image
+                                        src="/IMG_8B2A1720A16D-1.jpeg"
+                                        alt="BeginOS App Dashboard"
+                                        fill
+                                        className="object-cover object-top"
+                                        priority
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </motion.div>

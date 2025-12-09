@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "BeginOS - The First New Country Operating System",
-    description: "Banking, payments, and legal support for international students. Build US credit from day one.",
+    description: "Banking, Credit Building and Compliance for international students from day one.",
   },
   robots: {
     index: true,

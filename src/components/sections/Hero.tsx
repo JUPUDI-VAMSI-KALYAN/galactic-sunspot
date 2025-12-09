@@ -2,11 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue, AnimatePresence } from "framer-motion";
 import { ArrowRight, Globe, ShieldCheck, CreditCard, DollarSign, Euro, PoundSterling, JapaneseYen, Bitcoin, IndianRupee } from "lucide-react";
 import { MouseEvent, useEffect, useState } from "react";
 import RotatingEarth from "@/components/ui/RotatingEarth";
 import UniversityTicker from "@/components/ui/UniversityTicker";
+import { RotatingText } from "@/components/ui/RotatingText";
 
 import { useWaitlist } from "@/hooks/useWaitlist";
 
@@ -23,6 +24,8 @@ export function Hero() {
         window.addEventListener('trigger-waitlist-glow', handleGlow);
         return () => window.removeEventListener('trigger-waitlist-glow', handleGlow);
     }, []);
+
+
 
 
     const mouseX = useMotionValue(0);
@@ -113,8 +116,8 @@ export function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/10 border border-white/20 text-white/80 text-xs font-medium mb-6 backdrop-blur-sm">
-                            For International Students
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/10 border border-white/20 text-white/80 text-xs font-medium mb-4 backdrop-blur-sm h-7 overflow-hidden whitespace-nowrap min-w-[200px] justify-center">
+                            <RotatingText />
                         </div>
                         <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-white mb-4">
                             The World's Only <br />
@@ -207,9 +210,9 @@ export function Hero() {
                     className="relative w-full flex justify-center lg:justify-end lg:pr-40"
                 >
                     {/* Dashboard Visual */}
-                    <div className="relative w-[280px] flex-none transform rotate-[-5deg] hover:rotate-0 transition-all duration-500">
+                    <div className="relative w-[250px] flex-none transform rotate-[-5deg] hover:rotate-0 transition-all duration-500">
                         {/* iPhone Frame */}
-                        <div className="relative rounded-[3rem] border-[8px] border-gray-900 shadow-2xl bg-gray-900 overflow-hidden h-[580px]">
+                        <div className="relative rounded-[2.5rem] border-[7px] border-gray-900 shadow-2xl bg-gray-900 overflow-hidden h-[520px]">
                             {/* Dynamic Island / Notch */}
                             <div className="absolute top-0 left-1/2 -translate-x-1/2 h-5 w-28 bg-black rounded-b-2xl z-20"></div>
 
